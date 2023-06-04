@@ -1,9 +1,9 @@
 <?php
 
-namespace WeDevs\ORM\WP;
+namespace WPEloquent\ORM\WP;
 
 
-use WeDevs\ORM\Eloquent\Model;
+use WPEloquent\ORM\Eloquent\Model;
 
 class PostMeta extends Model
 {

@@ -25,14 +25,14 @@ Now run:
 
 ```php
 
-$db = \WeDevs\ORM\Eloquent\Database::instance();
+$db = \WPEloquent\ORM\Eloquent\Database::instance();
 
 var_dump( $db->table('users')->find(1) );
 var_dump( $db->select('SELECT * FROM wp_users WHERE id = ?', [1]) );
 var_dump( $db->table('users')->where('user_login', 'john')->first() );
 
 // OR with DB facade
-use \WeDevs\ORM\Eloquent\Facades\DB;
+use \WPEloquent\ORM\Eloquent\Facades\DB;
 
 var_dump( DB::table('users')->find(1) );
 var_dump( DB::select('SELECT * FROM wp_users WHERE id = ?', [1]) );
@@ -46,7 +46,7 @@ You can use custom tables of the WordPress databases to create models:
 <?php
 namespace Whatever;
 
-use WeDevs\ORM\Eloquent\Model;
+use WPEloquent\ORM\Eloquent\Model;
 
 class CustomTableModel extends Model {
 
@@ -128,7 +128,7 @@ Here `users` is the table name **without prefix**. The prefix will be applied au
 ## Writing a Model
 
 ```php
-use \WeDevs\ORM\Eloquent\Model as Model;
+use \WPEloquent\ORM\Eloquent\Model as Model;
 
 class Employee extends Model {
 
@@ -149,14 +149,14 @@ The class name `Employee` will be translated into `PREFIX_employees` table to ru
 
 
 ```php
-use WeDevs\ORM\WP\Post as Post;
+use WPEloquent\ORM\WP\Post as Post;
 
 var_dump( Post::all() ); //returns only posts with WordPress post_type "post"
 ```
 
 #### Filter `Post` by `post_status` and `post_type`
 ```php
-use WeDevs\ORM\WP\Post as Post;
+use WPEloquent\ORM\WP\Post as Post;
 var_dump(Post::type('page')->get()->toArray()); // get pages
 var_dump(Post::status('publish')->get()->toArray()); // get posts with publish status
 var_dump(Post::type('page')->status('publish')->get()->toArray()); // get pages with publish status

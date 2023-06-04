@@ -11,12 +11,12 @@
     "authors": [
         {
             "name": "Tareq Hasan",
-            "email": "tareq@wedevs.com"
+            "email": "tareq@WPEloquent.com"
         }
     ],
     "autoload" : {
       "psr-4" : {
-        "WeDevs\\ORM\\": "src/"
+        "WPEloquent\\ORM\\": "src/"
       }
     }
 }

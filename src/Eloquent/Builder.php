@@ -1,12 +1,12 @@
 <?php
-namespace WeDevs\ORM\Eloquent;
+namespace WPEloquent\ORM\Eloquent;
 
 use Illuminate\Database\Query\Builder as EloquentBuilder;
 
 /**
  * QueryBuilder Class
  *
- * @package WeDevs\ERP\Framework
+ * @package WPEloquent\ERP\Framework
  */
 class Builder extends EloquentBuilder {
 
